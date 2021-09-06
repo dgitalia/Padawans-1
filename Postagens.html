@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style type="text/css">
+        * {
+    margin: 50;
+    padding: 50;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: x-large;
+    background: url(".jpg") no-repeat center center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #23232e;
+    height: 12vh;
+  }
+  
+  main {
+    background: url(".jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+    color: black;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+        </style>
+    
+  </head>
+
+  <body>
+	<nav>
+        <a class="logo" href="/">Padawans</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="Padwans.html">Início</a></li>
+          <li><a href="Postagens.html">Postagens</a></li>
+          <li><a href="Albuns.html">Albuns</a></li>
+          <li><a href="A Fazer.html">A Fazer</a></li>
+        </ul>
+      </nav>
+
+      <main>
+          <section>
+              <h2>Blog Post 1 </h2>
+
+              <h3>O que é Lorem Ipsum?</h3>
+
+              <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica 
+                e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor 
+                desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de 
+                modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao 
+                salto para a editoração eletrônica, permanecendo essencialmente inalterado. 
+                Se popularizou na década de 60, quando a Letraset lançou decalques contendo 
+                passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a 
+                softwares de editoração eletrônica como Aldus PageMaker.</p>
+          </section>
+          <hr>
+          <section>
+            <h2>Blog Post 2 </h2>
+
+            <h3>De onde ele vem?</h3>
+
+            
+            <p>Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. 
+               Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura 
+               latina clássica datada de 45 AC. Richard McClintock, um professor de latim do 
+               Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, 
+               consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações 
+               da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem 
+               das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), 
+               de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época 
+               da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha 
+               na seção 1.10.32.
+
+                O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para 
+                os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também 
+                foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da 
+                tradução feita por H. Rackham em 1914.</p>
+        </section>
+        <hr>
+        <section>
+            <h2>Blog Post 3 </h2>
+
+            <h3>Porque nós o usamos?</h3>
+
+            
+            <p>É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível 
+                de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum 
+                é que ele tem uma distribuição normal de letras, ao contrário de "Conteúdo aqui, conteúdo 
+                aqui", fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos 
+                softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como 
+                texto-modelo padrão, e uma rápida busca por 'lorem ipsum' mostra vários websites ainda 
+                em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente 
+                por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).</p>
+        </section>
+        <hr>
+        <h3>Sobre</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel debitis beatae, 
+              dolorum neque ullam quas praesentium vitae aut assumenda dolore illo a sunt quae 
+              quisquam sit ab cum accusamus?</p>
+          <hr>
+          <h3>Posts Recentes</h3>
+          <ul>
+              <li><a href="#">Blog Post #3</a></li>
+              <li><a href="#">Blog Post #2</a></li>
+              <li><a href="#">Blog Post #1</a></li>
+          </ul>
+
+      </main>
+      
+      
+  </body>
+</html>
